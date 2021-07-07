@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson_1</title>
+</head>
+
+<body>
+    <script>
+        /*
+        Задать температуру в градусах по Цельсию. Вывести в alert соответствующую температуру в градусах 
+        по Фаренгейту. Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, 
+        Tc – температура по Цельсию
+        */
+        var degreeCelsi = prompt('Enter degree celsi');
+        var degreeFahrenheit = (9 / 5) * degreeCelsi + 32;
+        alert(`${degreeCelsi} degree of Celsi it's ${degreeFahrenheit} degree of Fahrenheit`);
+    </script>
+    <script>
+        /*
+        Работа с переменными. Объявить две переменные: admin и name. Записать в name строку "Василий"; 
+        Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+        */
+        let admin, name;
+        name = 'Василий';
+        admin = name;
+        alert(`Name of admin '${admin}'`);
+        alert(`${name} == ${admin} is ${name == admin} \n${name} === ${admin} is ${name === admin} `)
+    </script>
+    <script>
+        // Чему будет равно JS-выражение 1000 + "108"
+        alert(1000 + '108'); // результат: 1000108, так как если хотябы один из операндов имеет строковый тип, то происходит конкатенация!
+    </script>
+</body>
+
+</html>
+
+<!-- Самостоятельно разобраться с атрибутами тега script (async и defer)
+Отличия в приведенных выше атрибутах в том, что скрипты в defer загружается последовательно, как указаны.
+А выполнения скриптов осуществляется после загрузки HTML-страницы (событие DOMContentLoaded).
+В async загрузка осуществляется в том порядке, который быстрее прогрузился тот и запускается.
+А также он не ждет cобытиz DOMContentLoaded. -->
